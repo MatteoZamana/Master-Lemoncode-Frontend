@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  margin: 25px;
+  text-align: left;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  background-color: darkcyan;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 25px;
+  list-style: none;
+}
+
+nav li > a {
+  text-decoration: none;
+  color: white;
+  display: block; /* make the whole area clickable */
+}
+
+nav li:hover {
+  background-color: darkslategrey;
+}
+
+@media screen and (max-width: 900px) {
+  nav ul {
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+  nav li {
+    padding: 12px 0; /* reduce padding on small screens */
+  }
+}

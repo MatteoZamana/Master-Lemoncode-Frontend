@@ -1,0 +1,69 @@
+// =============================
+// Esercizio 1 - Tavolozze di colori dinamiche (3 righe orizzontali)
+// =============================
+
+// 🎨 Mixin per generare automaticamente una palette da un colore base
+@mixin palette($base-color) {
+  $darken-1: darken($base-color, 10%);
+  $darken-2: darken($base-color, 20%);
+  $darken-3: darken($base-color, 30%);
+  $darken-4: darken($base-color, 40%);
+
+  $lighten-1: lighten($base-color, 10%);
+  $lighten-2: lighten($base-color, 20%);
+  $lighten-3: lighten($base-color, 30%);
+  $lighten-4: lighten($base-color, 40%);
+
+  .box.darken-4 { background-color: $darken-4; }
+  .box.darken-3 { background-color: $darken-3; }
+  .box.darken-2 { background-color: $darken-2; }
+  .box.darken-1 { background-color: $darken-1; }
+  .box.base-color { background-color: $base-color; }
+  .box.lighten-1 { background-color: $lighten-1; color: #000; }
+  .box.lighten-2 { background-color: $lighten-2; color: #000; }
+  .box.lighten-3 { background-color: $lighten-3; color: #000; }
+  .box.lighten-4 { background-color: $lighten-4; color: #000; }
+}
+
+// =============================
+// Layout generale per tutte le palette
+// =============================
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+// =============================
+// Palette blu, rossa e verde
+// =============================
+
+.container-blue { @include palette(#3498db); }
+.container-red  { @include palette(#e74c3c); }
+.container-green { @include palette(#27ae60); }

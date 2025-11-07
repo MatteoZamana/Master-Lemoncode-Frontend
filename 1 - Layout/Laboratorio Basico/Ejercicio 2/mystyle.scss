@@ -1,0 +1,59 @@
+// Cambia el tema comentando/descomentando las siguientes líneas
+@import "theme-a";
+//@import "theme-b";
+
+// Layout helper: evita inline-style in HTML
+.exercise-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+// Common styles
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: $primary-font;
+  border-radius: $border-radius;
+}
+
+.box-with-shadow {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $box-shadow;
+  margin: 20px;
+}
+
+// Base styles
+.base {
+  background-color: $base-color;
+}
+
+.important {
+  background-color: $important-color;
+}
+
+.warning {
+  background-color: $warning-color;
+  color: black;
+}
+
+// Font examples
+.primary-font {
+  font-family: $primary-font;
+}
+
+.secondary-font {
+  font-family: $secondary-font;
+}

@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Build
+dist/
+build/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Config e ambienti
+.env
+
+# IDE e editor
+.vscode/
+*.code-workspace

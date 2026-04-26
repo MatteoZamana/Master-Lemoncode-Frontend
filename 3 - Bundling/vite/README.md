@@ -1,0 +1,67 @@
+# Vite
+### Obligatorio
+Montar una semilla de proyecto con vite que:
+
+- Esté configurado con TypeScript y que permita detectar errores de tipos en la terminal si los hubiera.
+- Se pueda ver el tamaño del bundle.
+- Tenga los scripts ```start``` para levantar el servidor de desarrollo y ```preview``` para levantar el bundle de producción.
+- Tenga variables de entorno. Puedes usar una cadena de texto que muestres con un console.log donde en desarrollo, mientras lo levantas en local con ```npm start``` tenga un valor, pero al hacer la build y verlo con ```npm run preview``` tenga otro valor.
+- Creéis un elemento H1 con texto utilizando la API del DOM y ese H1 esté estilado con CSSModules
+
+### Opcional
+Añadir al proyecto semilla de Vite la configuración necesaria para que al hacer la build también genere los ficheros de forma comprimida (GZIP y BROTLI), por lo que al hacer la build deberán existir los ficheros ```dist/index.js.gz``` y un ```dist/index.js.br```.
+
+# Cómo ver el proyecto
+## Requisitos
+- Node.js
+- npm
+
+## Cómo ejecutar
+1. Clonar el repositorio
+```bash
+git clone <url-del-repositorio>
+cd <nombre-del-proyecto>
+```
+2. Instalar dependencias
+```bash
+npm install
+```
+3. Levantar el servidor en desarrollo
+```bash
+npm start
+```
+4. Ver tamaño del bundle y levantar el servidor en producción
+```bash
+npm run build
+npm run preview
+```
+
+## Verificación de requisitos (rápida)
+
+### TypeScript (errores de tipos)
+```bash
+npm run typecheck
+```
+
+### Variables de entorno (dev vs prod)
+- En desarrollo:
+```bash
+npm start
+```
+En consola deberías ver: `Entorno:  DESARROLLO`
+
+- En producción:
+```bash
+npm run build
+npm run preview
+```
+En consola deberías ver: `Entorno:  PRODUCCION`
+
+### Tamaño del bundle
+```bash
+npm run build
+```
+El build genera un informe del tamaño del bundle (plugin `vite-bundle-analyzer`).
+
+### (Opcional) Archivos comprimidos (GZIP y BROTLI)
+Después de `npm run build` deberían existir archivos `.gz` y `.br` dentro de `dist/` (normalmente en `dist/assets/`), por ejemplo: `index-<hash>.js.gz` y `index-<hash>.js.br`.

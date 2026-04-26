@@ -6,7 +6,11 @@ import viteCompression from "vite-plugin-compression";
 export default defineConfig({
     plugins: [
         checker({ typescript: true }),
-        analyzer(),
+        analyzer({
+            analyzerMode: "static",
+            openAnalyzer: false,
+            fileName: "bundle-report",
+        }),
         viteCompression({
             verbose: true,       
             disable: false,      

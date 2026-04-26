@@ -61,7 +61,7 @@ En consola deberías ver: `Entorno:  PRODUCCION`
 ```bash
 npm run build
 ```
-El build genera un informe del tamaño del bundle (plugin `vite-bundle-analyzer`).
+El build genera un informe del tamaño del bundle como HTML estático en `dist/bundle-report.html` (plugin `vite-bundle-analyzer`).
 
 ### (Opcional) Archivos comprimidos (GZIP y BROTLI)
 Después de `npm run build` deberían existir archivos `.gz` y `.br` dentro de `dist/` (normalmente en `dist/assets/`), por ejemplo: `index-<hash>.js.gz` y `index-<hash>.js.br`.
